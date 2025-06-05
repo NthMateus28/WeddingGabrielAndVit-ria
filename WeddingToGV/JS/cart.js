@@ -11,6 +11,7 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+console.log("✅ Firebase inicializado no cart.js");
 firebase.analytics();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -18,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const itemName = urlParams.get('item');
   const itemImg = urlParams.get('img');
   const itemId = urlParams.get('id');
+
+  console.log("🔍 Parâmetros recebidos:", { itemName, itemImg, itemId });
 
   if (itemName && itemImg) {
     document.getElementById("item-name").textContent = itemName;
@@ -56,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(() => {
               alert('Presente registrado com sucesso! Obrigado 💖');
               form.reset();
-              window.location.href = "../pages/giftList.html";
+              window.location.href = "giftList.html";
             })
             .catch(error => {
               console.error("Erro ao atualizar Firebase:", error);
@@ -66,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
           console.warn("ID do produto não encontrado na URL.");
           alert('Presente registrado com sucesso! Obrigado 💖');
           form.reset();
-          window.location.href = "../pages/giftList.html";
+          window.location.href = "giftList.html";
         }
       } else {
         alert('Erro ao registrar. Tente novamente.');
