@@ -1,6 +1,6 @@
 // Configuração e inicialização do Firebase diretamente neste arquivo
 const firebaseConfig = {
-  apiKey: "AIzaSyAFDeiAptyKrAnMLrq93GAE1ayzXz3wDj4",
+  apiKey: "AIzaSyBaMj4lQzmevuWwqio-udKGLtMT31hW5Bw",
   authDomain: "lista-presentes-casament-d2207.firebaseapp.com",
   databaseURL: "https://lista-presentes-casament-d2207-default-rtdb.firebaseio.com",
   projectId: "lista-presentes-casament-d2207",
