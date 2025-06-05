@@ -1,0 +1,63 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+  }
+  
+  header {
+    background-color: #800000;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem;
+
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .pessoas-lista {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .pessoa-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .pessoa-nome {
+    font-size: 1rem;
+  }
+  
+  .pessoa-pagamento button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .pessoa-pagamento button:hover {
+    background-color: #1c78d4;
+  }
+  
+  .pessoa-pagamento .pago {
+    color: green;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  

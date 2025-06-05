@@ -1,0 +1,110 @@
+.intro {
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 20px;
+}
+
+.intro p {
+  max-width: 800px;
+  margin: 0 auto 16px;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px; /* espaçamento aumentado */
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 10px;
+}
+
+.color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.color-label {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.gift-section {
+  padding: 40px 20px;
+}
+
+.gift-section h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Grade centralizada com largura máxima */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-content: center;       /* Centraliza a grade */
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Item com layout vertical */
+.gift-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagem redimensionada */
+.gift-item img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.gift-item .btn {
+  display: inline-flex; /* garante alinhamento vertical */
+  justify-content: center; /* centraliza o texto horizontalmente */
+  align-items: center;     /* centraliza o texto verticalmente */
+  text-decoration: none;
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--marsala);
+  color: var(--white);
+  border: 2px solid var(--marsala);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer; /* para manter aparência de botão ao passar o mouse */
+}
+
+
+.gift-item .btn:hover {
+  background-color: var(--white);
+  color: var(--marsala);
+}
+
+.gift-item .btn:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}

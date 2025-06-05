@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confirmar Presente</title>
+
+  <!-- Fonte e estilos globais -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/stiyle.css" />
+  <link rel="stylesheet" href="../styles/cart.css" />
+</head>
+<body>
+  <header>
+    <img src="../images/banner.png" alt="Banner do Casamento" class="banner" />
+  </header>
+
+  <section class="cart-section">
+    <h2>Você escolheu presentear com:</h2>
+
+    <div class="selected-item">
+      <img id="item-image" src="" alt="Imagem do Presente Selecionado" />
+      <p id="item-name"></p>
+    </div>
+
+    <form class="gift-form">
+      <label for="nome">Seu Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+      <button type="submit" class="btn" id="enviar">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- Script principal -->
+  <script src="../JS/cart.JS"></script>
+</body>
+</html>

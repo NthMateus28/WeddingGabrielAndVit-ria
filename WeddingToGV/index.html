@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casamento de Gabriel e Vitória</title>
+
+  <!-- Fonte romântica -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="styles/stiyle.css" />
+    </head>
+<body>
+  <header>
+    <!-- <h1>Casamento de Gabriel e Vitória</h1> -->
+    <img src="images/banner.png" alt="Banner do Casamento" class="banner" />
+  </header>
+
+  <hr>
+
+  <section class="timer-section">
+    <h2>Contagem regressiva para o grande dia!</h2>
+    <p id="countdown"></p>
+  </section>
+
+  <hr>
+  
+    <p>Bem-vindos ao nosso site de casamento!</p>
+    <p>Estamos muito felizes em compartilhar com vocês a notícia de que nos casaremos no dia 20 de Setembro de 2025. Este será o dia mais especial de nossas vidas, e estamos ansiosos para celebrar com nossos amigos e familiares mais queridos.</p>
+    <p>A cerimônia será realizada na Kirsch Eventos em Parobé, seguida de uma recepção no próprio local, onde celebraremos nosso amor e nossa felicidade juntos.</p>
+    <p>Agradecemos a todos vocês por fazerem parte das nossas vidas e por nos apoiarem em nossa jornada até aqui. Estamos muito animados para começar esta nova fase de nossas vidas juntos, e esperamos que vocês possam estar conosco neste dia especial.</p>
+    <p>Neste site, vocês encontrarão todas as informações importantes sobre o nosso casamento, como acomodações, horários, mapas e muito mais. Fiquem à vontade para explorar e entrar em contato conosco se tiverem alguma dúvida.</p>
+    <p>Estamos ansiosos para ver todos vocês no nosso grande dia!</p>
+    <p>Com amor, Gabriel e Vitória!</p>
+
+  <hr>
+
+
+  <section class="buttons-section">
+    <a href="./pages/giftList.html" class="btn">Lista de Presentes</a>
+    <a href="./pages/presence.html" class="btn">Confirmar Presença</a>
+    <a href="./pages/galery.html" class="btn">Galeria</a>
+  </section>
+
+  <script>
+    // Data do casamento
+    const countDownDate = new Date("Sep 20, 2025 17:00:00").getTime();
+
+    const x = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "CHEGOU O GRANDE DIA";
+      }
+    }, 1000);
+  </script>
+
+  <hr>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3467.8355911998997!2d-50.856644!3d-29.637518000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951917e2a85e8509%3A0x7e8a79735a9c40ee!2sR.%20Deneval%20Franquilin%20Queiroz%2C%20100%20-%20Parob%C3%A9%2C%20RS%2C%2095630-000!5e0!3m2!1spt-BR!2sbr!4v1747963911128!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0; margin-bottom: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

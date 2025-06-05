@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --marsala: #800000;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
+  color: var(--marsala);
+  overflow-x: hidden; /* impede rolagem horizontal */
+  width: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  padding: 30px 10px 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 auto 20px auto;
+  background-color: var(--marsala);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: justify;
+  max-width: 95%;
+}
+
+.banner {
+  width: 60%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.timer-section h2 {
+  font-size: 2rem;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 2.5rem;
+  margin: 20px 0 100px 0;
+}
+
+hr {
+  border: 0.1px solid var(--marsala);
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+p:first-of-type {
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  max-width: 95%;
+}
+
+p:not(:first-of-type) {
+  text-align: justify;
+  text-indent: 2em;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 0;
+}
+
+.btn {
+  background-color: var(--marsala);
+  color: var(--white);
+  padding: 12px 30px;
+  border: 2px solid var(--marsala);
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 300px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--marsala);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+
+  .banner {
+    width: 90%;
+    max-height: 200px;
+  }
+
+  .timer-section h2 {
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+
+  #countdown {
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+
+  hr {
+    margin: 20px auto;
+  }
+
+  p:not(:first-of-type),
+  p:first-of-type {
+    margin: 0 1rem 16px 1rem;
+    text-indent: 1.5em;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    padding: 10px;
+    text-align: center;
+    margin: 0 1rem 20px 1rem;
+  }
+
+  .banner {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .timer-section h2 {
+    font-size: 1.5rem;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    padding: 0 1rem;
+  }
+
+  #countdown {
+    font-size: 2rem;
+    margin-bottom: 60px;
+    padding: 0 1rem;
+  }
+
+  hr {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  p:not(:first-of-type),
+  p:first-of-type {
+    padding: 0 1rem;
+    margin: 0 auto 16px auto;
+    text-align: justify;
+    text-indent: 1.5em;
+    max-width: 100%;
+  }
+
+  .buttons-section {
+    padding: 30px 1rem;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 1rem;
+  }
+}

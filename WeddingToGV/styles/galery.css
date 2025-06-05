@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url(../styles/stiyle.css);
+
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    margin: 2rem;
+}
+
+.title {
+    text-align: center;
+}
+
+/* Galeria */
+.containerPhotos {
+    margin-top: 10px;
+    display: flex;
+    max-width: 100%;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    text-align: center;
+}
+
+.containerPhotos img {
+    margin: 5px;
+    width: 29%;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s;
+    position: relative; /* Adicione esta propriedade */
+    z-index: 1; /* Adicione esta propriedade */
+    border: 4px solid rgb(44, 44, 44);
+}
+
+.containerPhotos img:hover {
+    transform: scale(1.2);
+    z-index: 2; /* Adicione esta propriedade para aumentar a ordem de empilhamento quando o mouse passar por cima */
+}
+
+@media screen and (max-width: 768px) {
+    body > div.main-text {
+        padding: 0;
+        margin: 0 20px;
+    }
+
+    .containerPhotos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerPhotos img {
+        margin: 5px;
+        width: 90%;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.2s;
+    }
+
+    .containerPhotos img:hover {
+        transform: scale(1.1);
+        z-index: 2; /* Adicione esta propriedade para aumentar a ordem de empilhamento quando o mouse passar por cima */
+    }
+}

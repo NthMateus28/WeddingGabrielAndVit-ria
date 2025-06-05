@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confirmar Presença</title>
+
+  <!-- Fonte e estilo -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/stiyle.css" />
+  <link rel="stylesheet" href="../styles/confirmPresence.css" />
+</head>
+<body>
+  <header>
+    <img src="../images/banner.png" alt="Banner do Casamento" class="banner" />
+  </header>
+
+  <section class="intro">
+    <h2>Confirmação de Presença</h2>
+    <p class="explicacao">
+      Aqui estão os nomes e idades das pessoas selecionadas. Confira os dados e finalize sua confirmação clicando no botão abaixo. O valor total a ser pago será exibido junto com o link para o pagamento. Após confirmar, seu status será atualizado automaticamente.
+    </p>
+  </section>
+
+  <section class="confirm-list" id="confirm-list">
+    <!-- Lista será preenchida dinamicamente -->
+  </section>
+
+  <div class="actions">
+    <p id="total-confirmado">Total a pagar: R$ 0,00</p>
+    <a href="https://seulinkdepagamento.com" target="_blank" class="btn pagar">Ir para o pagamento</a>
+    <button class="btn confirmar" id="confirmar-presenca">Confirmar Presença</button>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- Script -->
+  <script src="../js/confirmPresence.js"></script>
+</body>
+</html>
