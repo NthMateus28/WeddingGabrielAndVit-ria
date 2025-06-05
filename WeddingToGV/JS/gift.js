@@ -15,6 +15,8 @@ const db = firebase.database();
 function carregarProdutos() {
   db.ref("produtos").once("value").then(snapshot => {
     const produtos = snapshot.val();
+    console.log("Dados recebidos do Firebase:", produtos); // <-- log adicionado
+
     const secoes = {};
 
     for (let id in produtos) {
