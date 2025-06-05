@@ -1,15 +1,17 @@
-// Configuração e inicialização do Firebase diretamente neste arquivo
+// Configuração do Firebase com SDK compat
 const firebaseConfig = {
   apiKey: "AIzaSyBaMj4lQzmevuWwqio-udKGLtMT31hW5Bw",
   authDomain: "lista-presentes-casament-d2207.firebaseapp.com",
   databaseURL: "https://lista-presentes-casament-d2207-default-rtdb.firebaseio.com",
   projectId: "lista-presentes-casament-d2207",
-  storageBucket: "lista-presentes-casament-d2207.appspot.com",
+  storageBucket: "lista-presentes-casament-d2207.appspot.com", // corrigido
   messagingSenderId: "942457963760",
-  appId: "1:942457963760:web:1c41d0e5f52c37b6e82e35"
+  appId: "1:942457963760:web:1c41d0e5f52c37b6e82e35",
+  measurementId: "G-GGPR8564P5"
 };
 
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
@@ -47,33 +49,33 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       body: JSON.stringify(data)
     })
-      .then(response => {
-        if (response.ok) {
-          if (itemId) {
-            desativarPresentePorId(itemId, nome)
-              .then(() => {
-                alert('Presente registrado com sucesso! Obrigado 💖');
-                form.reset();
-                window.location.href = "../pages/giftList.html";
-              })
-              .catch(error => {
-                console.error("Erro ao atualizar Firebase:", error);
-                alert('Presente registrado, mas ocorreu um erro ao atualizar o status.');
-              });
-          } else {
-            console.warn("ID do produto não encontrado na URL.");
-            alert('Presente registrado com sucesso! Obrigado 💖');
-            form.reset();
-            window.location.href = "../pages/giftList.html";
-          }
+    .then(response => {
+      if (response.ok) {
+        if (itemId) {
+          desativarPresentePorId(itemId, nome)
+            .then(() => {
+              alert('Presente registrado com sucesso! Obrigado 💖');
+              form.reset();
+              window.location.href = "../pages/giftList.html";
+            })
+            .catch(error => {
+              console.error("Erro ao atualizar Firebase:", error);
+              alert('Presente registrado, mas ocorreu um erro ao atualizar o status.');
+            });
         } else {
-          alert('Erro ao registrar. Tente novamente.');
+          console.warn("ID do produto não encontrado na URL.");
+          alert('Presente registrado com sucesso! Obrigado 💖');
+          form.reset();
+          window.location.href = "../pages/giftList.html";
         }
-      })
-      .catch(error => {
-        console.error('Erro:', error);
-        alert('Erro de conexão. Tente mais tarde.');
-      });
+      } else {
+        alert('Erro ao registrar. Tente novamente.');
+      }
+    })
+    .catch(error => {
+      console.error('Erro:', error);
+      alert('Erro de conexão. Tente mais tarde.');
+    });
   });
 
   function desativarPresentePorId(id, nomePessoa) {
