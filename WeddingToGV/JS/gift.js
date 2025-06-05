@@ -1,4 +1,7 @@
 // Configuração do Firebase (usando compat)
+    console.log("cHAMOU");
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyBaMj4lQzmevuWwqio-udKGLtMT31hW5Bw",
   authDomain: "lista-presentes-casament-d2207.firebaseapp.com",
