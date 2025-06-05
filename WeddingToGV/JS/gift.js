@@ -24,14 +24,14 @@ function carregarProdutos() {
       if (p.status !== "ativo") continue;
 
       if (!secoes[p.categoria]) secoes[p.categoria] = [];
-      secoes[p.categoria].push(`
-        <div class="gift-item">
-          <img src="${p.imagem}" alt="${p.nome}">
-            <a class="btn" href="pages/cart.html?item=${encodeURIComponent(p.nome)}&img=${encodeURIComponent(p.imagem)}&id=${id}">
-            ${p.nome}
-          </a>
-        </div>
-      `);
+        secoes[p.categoria].push(`
+          <div class="gift-item">
+            <img src="${p.imagem}" alt="${p.nome}">
+            <a class="btn" href="cart.html?item=${encodeURIComponent(p.nome)}&img=${encodeURIComponent(p.imagem)}&id=${id}">
+              ${p.nome}
+            </a>
+          </div>
+        `);
     }
 
     const container = document.createElement("div");
