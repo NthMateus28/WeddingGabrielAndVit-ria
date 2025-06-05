@@ -1,7 +1,3 @@
-// Configuração do Firebase (usando compat)
-    console.log("cHAMOU");
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyBaMj4lQzmevuWwqio-udKGLtMT31hW5Bw",
   authDomain: "lista-presentes-casament-d2207.firebaseapp.com",
@@ -31,7 +27,7 @@ function carregarProdutos() {
       secoes[p.categoria].push(`
         <div class="gift-item">
           <img src="${p.imagem}" alt="${p.nome}">
-          <a class="btn" href="cart.html?item=${encodeURIComponent(p.nome)}&img=${encodeURIComponent(p.imagem)}&id=${id}">
+            <a class="btn" href="pages/cart.html?item=${encodeURIComponent(p.nome)}&img=${encodeURIComponent(p.imagem)}&id=${id}">
             ${p.nome}
           </a>
         </div>
