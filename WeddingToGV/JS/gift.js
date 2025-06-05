@@ -13,6 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
 function carregarProdutos() {
+    console.log("Função carregarProdutos foi chamada");
   db.ref("produtos").once("value").then(snapshot => {
     const produtos = snapshot.val();
     console.log("Dados recebidos do Firebase:", produtos); // <-- log adicionado
