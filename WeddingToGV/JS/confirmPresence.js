@@ -13,7 +13,9 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
 // Recupera os dados do localStorage (enviados da página anterior)
-const selecionados = JSON.parse(localStorage.getItem("confirmacaoPresenca")) || [];
+const params = new URLSearchParams(window.location.search);
+const dados = params.get("dados");
+const selecionados = dados ? JSON.parse(decodeURIComponent(dados)) : [];
 
 const confirmList = document.getElementById("confirm-list");
 const totalEl = document.getElementById("total-confirmado");
