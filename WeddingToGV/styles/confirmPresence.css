@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    
+  font-family: 'Montserrat', sans-serif;
 }
 
 .confirm-list {
@@ -12,7 +11,7 @@ body {
   margin: 2rem auto 6rem auto;
   max-width: 800px;
   padding: 0 1rem;
-  padding-bottom: 7rem; /* espaço para não encobrir os botões fixos */
+  padding-bottom: 10rem; /* Aumentado para evitar sobreposição */
 }
 
 .confirm-item {
@@ -75,8 +74,9 @@ body {
 /* Responsivo */
 @media (max-width: 768px) {
   .confirm-list {
-    margin: 1rem auto 7rem auto;
+    margin: 1rem auto;
     padding: 0 1rem;
+    padding-bottom: 2rem; /* reduzido no mobile já que actions não é mais fixa */
   }
 
   .confirm-item {
@@ -85,6 +85,8 @@ body {
   }
 
   .actions {
-    padding: 1rem;
+    position: static;
+    box-shadow: none;
+    padding-top: 2rem;
   }
 }
