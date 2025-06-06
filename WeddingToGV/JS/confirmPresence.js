@@ -12,10 +12,23 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// Recupera os dados do localStorage (enviados da página anterior)
-const params = new URLSearchParams(window.location.search);
-const dados = params.get("dados");
-const selecionados = dados ? JSON.parse(decodeURIComponent(dados)) : [];
+// Recupera os dados da URL
+let selecionados = [];
+
+try {
+  const params = new URLSearchParams(window.location.search);
+  const dados = params.get("dados");
+  if (dados) {
+    selecionados = JSON.parse(decodeURIComponent(dados));
+  } else {
+    alert("Nenhum dado encontrado na URL.");
+    window.location.href = "presence.html";
+  }
+} catch (e) {
+  console.error("Erro ao processar dados da URL:", e);
+  alert("Erro ao carregar dados. Retornando.");
+  window.location.href = "presence.html";
+}
 
 const confirmList = document.getElementById("confirm-list");
 const totalEl = document.getElementById("total-confirmado");
@@ -80,7 +93,6 @@ document.getElementById("confirmar-presenca").addEventListener("click", () => {
   Promise.all(requests)
     .then(() => {
       alert("Presença confirmada com sucesso! 💖");
-      localStorage.removeItem("confirmacaoPresenca");
       window.location.href = "../pages/presence.html";
     })
     .catch(err => {
