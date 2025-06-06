@@ -79,8 +79,8 @@ function adicionarListeners() {
     }
 
     // Redirecionar para página de confirmação
-    localStorage.setItem("confirmacaoPresenca", JSON.stringify(pessoas));
-    window.location.href = "../pages/confirmPresence.html";
+    const dataEncoded = encodeURIComponent(JSON.stringify(pessoas));
+    window.location.href = `../pages/confirmPresence.html?dados=${dataEncoded}`;
   });
 }
 
