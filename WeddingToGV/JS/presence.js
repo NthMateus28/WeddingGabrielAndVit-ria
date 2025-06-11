@@ -66,8 +66,8 @@ function adicionarListeners() {
         const idade = parseInt(idadeInput.value, 10);
         const nome = checkbox.parentElement.textContent.trim();
         let valor = 0;
-        if (idade > 12) valor = 56;
-        else if (idade >= 7) valor = 28;
+        if (idade > 12) valor = 60;
+        else if (idade >= 7) valor = 30;
 
         pessoas.push({ nome, idade, valor, id: checkbox.dataset.id });
       }
