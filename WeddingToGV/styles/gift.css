@@ -69,24 +69,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between; /* força empurrar o botão para a base */
+  height: 100%; /* para funcionar dentro da célula do grid */
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff; /* opcional, para teste visual */
+  border: 1px solid #eee; /* opcional */
 }
+
 
 /* Imagem redimensionada */
 .gift-item img {
   width: 100%;
   max-width: 160px;
+  max-height: 160px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
 .gift-item .btn {
-  display: inline-flex; /* garante alinhamento vertical */
-  justify-content: center; /* centraliza o texto horizontalmente */
-  align-items: center;     /* centraliza o texto verticalmente */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   width: 200px;
-  height: 30px;
+  height: 50px; /* <- altura fixa */
   padding: 10px;
   text-align: center;
   font-size: 1rem;
@@ -95,8 +103,11 @@
   border: 2px solid var(--marsala);
   border-radius: 8px;
   transition: all 0.3s ease;
-  cursor: pointer; /* para manter aparência de botão ao passar o mouse */
+  cursor: pointer;
+  white-space: normal; /* permite quebra de linha */
+  text-wrap: balance;
 }
+
 
 
 .gift-item .btn:hover {
