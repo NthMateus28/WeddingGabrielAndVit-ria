@@ -37,8 +37,8 @@ let valorTotal = 0;
 
 function calcularValor(idade) {
   if (idade <= 6) return 0;
-  if (idade <= 12) return 28;
-  return 56;
+  if (idade <= 12) return 30;
+  return 60;
 }
 
 function formatarValor(valor) {
