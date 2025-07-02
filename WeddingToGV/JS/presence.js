@@ -91,8 +91,8 @@ function calcularValor() {
     const idadeInput = item.querySelector('input[type="number"]');
     if (checkbox.checked && idadeInput.value) {
       const idade = parseInt(idadeInput.value, 10);
-      if (idade > 12) total += 56;
-      else if (idade >= 7) total += 28;
+      if (idade > 12) total += 60;
+      else if (idade >= 7) total += 30;
     }
   });
 
